@@ -1,10 +1,19 @@
+dateload();
+var basicneed = {
+    reloadPage : function()
+    {
+        window.location.reload();
+    }
+}
 function btnonclick()
 {
-    alert("Welcome to my website");
-    document.body.style.backgroundColor='cyan';
+    basicneed.reloadPage();
+    var txbx = document.getElementById('txtbx').value;
+    alert(txbx);
+    document.body.style.backgroundColor='orange';
 }
 function dateload()
 {
     var datetodayj = new Date();
-    document.getElementById('datetoday').innerHTML = datetodayj;
+    var elem = document.getElementById('datetoday');
 }
